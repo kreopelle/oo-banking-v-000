@@ -5,12 +5,11 @@ class Transfer
     @sender = sender
     @receiver = receiver
     @status = "pending"
-    @amount = amount 
+    @amount = amount
   end
 
   def valid?(sender, receiver)
-    if sender == true && receiver == true
-      valid == true
+    if sender
     end
   end
 
