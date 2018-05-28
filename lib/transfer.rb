@@ -8,7 +8,7 @@ class Transfer
     @amount = 50
   end
 
-  def valid?
-
+  def valid?(sender, receiver)
+    if sender 
 
 end
