@@ -8,4 +8,6 @@ class Transfer
     @amount = 50
   end
 
+  
+
 end
