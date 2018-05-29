@@ -25,7 +25,7 @@ class Transfer
       receiver.deposit(amount)
       @status = "complete"
     elsif @status == "complete"
-        return
+      return
     end
   end
 
