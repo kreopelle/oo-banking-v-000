@@ -62,7 +62,6 @@ describe 'Transfer' do
         transfer.execute_transaction
         expect(amanda.balance).to eq(950)
         expect(avi.balance).to eq(1050)
-        binding.pry 
       end
 
       it "rejects a transfer if the sender doesn't have a valid account" do
