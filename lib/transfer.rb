@@ -17,15 +17,15 @@ class Transfer
   end
 
   def execute_transaction
-    if @status == "complete"
-      return
+    if amount > sender.balanceba
+      @status = "rejected"
+      return "Transaction rejected. Please check your account balance."
     elsif valid? == true && @status == "pending"
       sender.balance = sender.balance - amount
       receiver.deposit(amount)
       @status = "complete"
-    elsif amount > sender.balance
-      @status = "rejected"
-      return "Transaction rejected. Please check your account balance."
+    elsif @status == "complete"
+        return
     end
   end
 
