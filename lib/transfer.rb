@@ -16,8 +16,8 @@ class Transfer
 
   def execute_transaction
     if valid? == false
-      "Transaction rejected. Please check your account balance."
       @status == "rejected"
+      "Transaction rejected. Please check your account balance."
     elsif @status == "complete"
       return nil
     elsif valid? == true && @status == "pending"
