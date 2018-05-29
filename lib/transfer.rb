@@ -16,8 +16,8 @@ class Transfer
 
   def execute_transaction
       if @status == "complete"
-        break
-      elsif valid? == true && @status == "pending"
+        return nil
+      if valid? == true && @status == "pending"
         sender.balance = sender.balance - amount
         receiver.deposit(amount)
         @status = "complete"
