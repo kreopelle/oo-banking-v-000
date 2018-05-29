@@ -66,8 +66,8 @@ describe 'Transfer' do
 
       it "rejects a transfer if the sender doesn't have a valid account" do
         expect(bad_transfer.execute_transaction).to eq("Transaction rejected. Please check your account balance.")
-        binding.pry 
         expect(bad_transfer.status).to eq("rejected")
+        binding.pry 
       end
     end
 
