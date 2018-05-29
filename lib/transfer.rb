@@ -17,7 +17,6 @@ class Transfer
   end
 
   def execute_transaction
-    legit = self.valid?
     if legit == false
       @status == "rejected"
       return "Transaction rejected. Please check your account balance."
